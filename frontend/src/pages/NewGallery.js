@@ -24,8 +24,8 @@ const NewGallery = () => {
   };
 
   return (
-    <div className='container bg-gray-200 rounded-xl shade'>
-      <h1 className='text-2xl mx-auto text-gray-800 front-bold bg-gray-200'>
+    <div className='container rounded-xl shade'>
+      <h1 className='text-2xl text-gray-800 front-bold'>
         AWS S3에서 사진 불러오기
       </h1>
       <form
