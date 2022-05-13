@@ -24,35 +24,35 @@ const NewGallery = () => {
   };
 
   return (
-    <div className='container rounded-xl shade'>
-      <h1 className='text-2xl text-gray-800 front-bold'>
-        AWS S3에서 사진 불러오기
-      </h1>
-      <form
-        onSubmit={handleSubmit}
-        className='text-xl text-gray-800 front-bold mb-5'>
-        <label
-          htmlFor='picturename'
-          className='text-xl text-gray-700 front-bold mb-5'>
-          Picture Name:
-        </label>
-        <input
-          className='bg-gray-200 mb-3'
-          name='picturename'
-          type='text'
-          id='picturename'
-          value={picturename}
-          onChange={(e) => setPicturename(e.target.value)}
-        />
-        <input
-          type='file'
-          name='imageFile'
-          accept='image/jpeg, image/jp, image/png'
-          onChange={handleFileChange}
-        />
-        <button>Submit</button>
-      </form>
-      <img src={s3Location} alt={'images-from-s3'} className='image' />
+    <div className='container'>
+      <div className='top'></div>
+      <div className='aside1'></div>
+      <div className='header'>AWS S3에서 사진 불러오기</div>
+      <div className='main'>
+        <form onSubmit={handleSubmit} className='items'>
+          <label htmlFor='picturename' className='items'>
+            Picture Name:
+          </label>
+          <input
+            className='items'
+            name='picturename'
+            type='text'
+            id='picturename'
+            value={picturename}
+            onChange={(e) => setPicturename(e.target.value)}
+          />
+          <input
+            className='items'
+            type='file'
+            name='imageFile'
+            accept='image/jpeg, image/jp, image/png'
+            onChange={handleFileChange}
+          />
+          <button className='items'>Submit</button>
+        </form>
+      </div>
+      <div className='aside2'></div>
+      <img className='image-display' src={s3Location} alt={'images-from-s3'} />
     </div>
   );
 };
