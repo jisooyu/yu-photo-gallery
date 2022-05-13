@@ -25,16 +25,11 @@ const NewGallery = () => {
 
   return (
     <div className='container'>
-      <div className='top'></div>
-      <div className='aside1'></div>
       <div className='header'>AWS S3에서 사진 불러오기</div>
       <div className='main'>
-        <form onSubmit={handleSubmit} className='items'>
-          <label htmlFor='picturename' className='items'>
-            Picture Name:
-          </label>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor='picturename'>Picture Name:</label>
           <input
-            className='items'
             name='picturename'
             type='text'
             id='picturename'
@@ -42,17 +37,15 @@ const NewGallery = () => {
             onChange={(e) => setPicturename(e.target.value)}
           />
           <input
-            className='items'
             type='file'
             name='imageFile'
             accept='image/jpeg, image/jp, image/png'
             onChange={handleFileChange}
           />
-          <button className='items'>Submit</button>
+          <button>Submit</button>
         </form>
       </div>
-      <div className='aside2'></div>
-      <img className='image-display' src={s3Location} alt={'images-from-s3'} />
+      <img className='image-display' src={s3Location} alt={'images From s3'} />
     </div>
   );
 };
