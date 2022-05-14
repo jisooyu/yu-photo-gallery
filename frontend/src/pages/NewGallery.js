@@ -28,7 +28,7 @@ const NewGallery = () => {
       <div className='header'>AWS S3에서 사진 불러오기</div>
       <div className='main'>
         <form onSubmit={handleSubmit}>
-          <label htmlFor='picturename'>Picture Name:</label>
+          <label htmlFor='picturename'>name:</label>
           <input
             name='picturename'
             type='text'

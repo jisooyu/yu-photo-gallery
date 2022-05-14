@@ -4,23 +4,28 @@ body {
 
 .container{
   background-color: rgb(249, 251, 251);
-  height: 50vh;
-  width: 50vw; 
+  height: 30vh;
+  width: 30vw; 
+  margin: 5rem 10rem;
   display: grid;
-  grid-template-rows: 50px 40px 100px 120px;
-  grid-template-columns: 0.5fr 2fr 0.5fr;
+  grid-template: 40px 100px 150px /  1fr;
   gap:10px;
+  grid-template-areas:
+    " header "
+    " main "
+    " image ";
 }
 
 .header {
-  grid-row: 2/3;
-  grid-column: 2/3;
+  grid-area: header;
+  margin: 20px 0;
+  text-align: center;
   background-color: rgb(242, 247, 247);
 }
 
 .main {
-  grid-row: 3/4;
-  grid-column: 2/3;
+  grid-area: main;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,8 +34,7 @@ body {
 }
 
 .image-display{
-  grid-row: 4/5;
-  grid-column: 2/3;
+  grid-area: image;
   width: 35rem;
   height: 30rem;
 }
