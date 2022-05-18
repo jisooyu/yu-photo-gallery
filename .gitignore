@@ -1,6 +1,9 @@
 .env
 /node_modules
 
+/uploalds
+images/**
+
 # testing
 /coverage
 
