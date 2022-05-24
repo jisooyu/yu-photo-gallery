@@ -67,7 +67,11 @@ const NewGallery = () => {
           Submit
         </button>
       </form>
-      <img src={s3Location} alt='' className='text-center mt-10 mx-auto' />
+      <img
+        src={s3Location}
+        alt=''
+        className='text-center mt-10 mx-auto w-80 h-70'
+      />
     </>
   );
 };
