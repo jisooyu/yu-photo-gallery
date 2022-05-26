@@ -28,14 +28,14 @@ const NewGallery = () => {
       <h1 className='bg-indigo-500 text-center p-4 text-4xl text-white'>
         AWS S3에서 사진 불러오기
       </h1>
-      <form onSubmit={handleSubmit} className='flex justify-center mt-8'>
+      <form onSubmit={handleSubmit} className='flex justify-center mt-8 '>
         <label
           htmlFor='formFile'
-          className='form-label inline-block mr-4 font-extrabold text-2xl text-gray-700'>
-          Picture Name:
+          className='form-label inline-block  min-w-fit mr-4 mt-6 md:mt-2 font-extrabold text-2xl text-gray-700 '>
+          이미지 이름:
         </label>
         <input
-          className=' text-2xl border-2 bg-indigo-200 mr-5'
+          className='text-2xl border-2 bg-indigo-200 mr-1 md:mr-5'
           name='picturename'
           type='text'
           id='picturename'
@@ -64,7 +64,7 @@ const NewGallery = () => {
           onChange={handleFileChange}
         />
         <button className='w-25 p-2 border-2 bg-indigo-500 border-indigo-400 border-solid rounded-2xl  text-2xl text-white font-bold'>
-          Submit
+          제출
         </button>
       </form>
       <img
