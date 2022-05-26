@@ -7,7 +7,7 @@ const NewGallery = () => {
   const [s3Location, setS3Location] = useState('');
 
   useEffect(() => {
-    document.title = 'You clicked the button';
+    document.title = 'AWS S3 Image';
   }, [s3Location]);
 
   const handleFileChange = (e) => {
